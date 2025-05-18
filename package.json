@@ -1,0 +1,14 @@
+{
+  "name": "cimax",
+  "version": "1.0.0",
+  "description": "Max Git CI CD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
