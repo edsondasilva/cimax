@@ -36,15 +36,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 64022
           source: "."
-          target: "/home/maxai"
-
-      - name: Rodar comandos no servidor
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 64022
-          script: |
-            cd /home/maxai
-            npm install       
+          target: "/home/maxai"     
