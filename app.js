@@ -7,7 +7,7 @@ app.get('/',  (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    res.send("OK 2");
+    res.send("OK 3");
 });
 
 app.listen(3000, function () {
