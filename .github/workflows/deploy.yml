@@ -34,6 +34,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          port: 64022
+          port: 22
           source: "."
           target: "/home/maxai2"     
