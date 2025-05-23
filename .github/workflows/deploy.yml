@@ -20,6 +20,9 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Lista arquivos
+        run: ls *.*
+
       - name: Rodar testes
         run: npm test
 
