@@ -32,11 +32,11 @@ jobs:
 
     steps:
       - name: Copiar arquivos para o servidor via SCP
-        uses: appleboy/scp-action@v1
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: 22
-          source: "*"
-          target: "/home/ubuntu/maxai"
+          source: "./*"
+          target: "/home/ubuntu/maxai3"
