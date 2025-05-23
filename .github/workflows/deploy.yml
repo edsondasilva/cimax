@@ -30,13 +30,13 @@ jobs:
     needs: build-and-test
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Copiar arquivos para o servidor via SCP
-        uses: actions/checkout@v4
+    steps:      
+      - uses: actions/checkout@v4
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          source: "."
-          target: "/home/ubuntu/maxai3"
+          node-version: '22'
+      - name: Get SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      - name: Copiar arquivos para o servidor via SCP
+        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r . ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/ubuntu/maxai
