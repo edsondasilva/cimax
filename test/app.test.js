@@ -1,5 +1,5 @@
-const request = require('supertest');
-const app = require('../app.js');
+import request from 'supertest';
+import app from '../app.js';
 
 describe('Testando rotas da API', () => {
     it('GET / deve retornar mensagem de boas-vindas', async () => {

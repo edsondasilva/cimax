@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
  
 const app = express();
 
@@ -11,7 +11,7 @@ app.post("/", (req, res) => {
 });
 
 // Exporta o app para testes
-module.exports = app;
+export default app;
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {
     app.listen(3000, () => {
