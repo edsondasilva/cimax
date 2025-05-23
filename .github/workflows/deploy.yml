@@ -39,4 +39,4 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
       - name: Copiar arquivos para o servidor via SCP
-        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r . ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/ubuntu/maxai
+        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/ubuntu/maxai
