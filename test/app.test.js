@@ -7,6 +7,7 @@ describe('Testando rotas da API', () => {
             .get('/')
             .expect(200)
             .expect('************ MaxAI CD/CI GITHUB ***************');
+            
     });
 
     it('POST / deve retornar confirmação OK', async () => {
@@ -14,5 +15,6 @@ describe('Testando rotas da API', () => {
             .post('/')
             .expect(200)
             .expect('OK 23052025-2');
+            
     });
 });

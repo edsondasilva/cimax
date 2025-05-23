@@ -4,7 +4,7 @@
   "description": "Max Git CI CD",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 5000 --bail"
   },
   "author": "Edson",
   "license": "ISC",
