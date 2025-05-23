@@ -36,4 +36,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 22
           source: "."
-          target: "/home/ubuntu/maxai"
+          target: "/home/ubuntu/maxai2"
