@@ -7,8 +7,11 @@ app.get('/',  (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    res.send("OK 23052025-2");
+    res.send("OK 23052025-21");
 });
+
+// Exporta o app para testes
+module.exports = app;
 
 app.listen(3000, function () {
     console.log('Server running...');
