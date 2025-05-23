@@ -13,6 +13,8 @@ app.post("/", (req, res) => {
 // Exporta o app para testes
 module.exports = app;
 
-app.listen(3000, function () {
-    console.log('Server running...');
-});
+if (process.argv[1] === new URL(import.meta.url).pathname) {
+    app.listen(3000, () => {
+        console.log('Server running...');
+    });
+}
